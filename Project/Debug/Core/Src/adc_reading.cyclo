@@ -1,0 +1,3 @@
+adc_reading.c:16:6:adc_reading_init	1
+adc_reading.c:21:6:read_sensor_value	1
+adc_reading.c:26:6:transmit_sensor_value	2
