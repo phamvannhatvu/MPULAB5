@@ -19,8 +19,7 @@ void uart_reading_init()
 
 uint8_t get_last_character()
 {
-	if (index_buffer == 0) return buffer[MAX_BUFFER_SIZE - 1];
-	return buffer[index_buffer - 1];
+	return temp;
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)

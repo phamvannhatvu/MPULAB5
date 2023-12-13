@@ -1,3 +1,3 @@
 uart_reading.c:15:6:uart_reading_init	1
-uart_reading.c:20:9:get_last_character	2
-uart_reading.c:26:6:HAL_UART_RxCpltCallback	3
+uart_reading.c:20:9:get_last_character	1
+uart_reading.c:25:6:HAL_UART_RxCpltCallback	3

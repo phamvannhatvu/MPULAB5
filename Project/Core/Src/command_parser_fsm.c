@@ -39,12 +39,14 @@ void command_parser_fsm()
 		if (get_last_character() != sensor_reading_command[command_index])
 		{
 			parserState = SENSOR_READING_IDLE;
-		}
-		++command_index;
-		if (command_index == sensor_reading_command_len)
+		}else
 		{
-			sensor_reading_flag = 1;
-			parserState = USER_ACCEPT_IDLE;
+			++command_index;
+			if (command_index == sensor_reading_command_len)
+			{
+				sensor_reading_flag = 1;
+				parserState = USER_ACCEPT_IDLE;
+			}
 		}
 		break;
 	case USER_ACCEPT_IDLE:
@@ -58,12 +60,14 @@ void command_parser_fsm()
 		if (get_last_character() != user_accept_command[command_index])
 		{
 			parserState = USER_ACCEPT_IDLE;
-		}
-		++command_index;
-		if (command_index == user_accept_command_len)
+		}else
 		{
-			user_accept_flag = 1;
-			parserState = SENSOR_READING_IDLE;
+			++command_index;
+			if (command_index == user_accept_command_len)
+			{
+				user_accept_flag = 1;
+				parserState = SENSOR_READING_IDLE;
+			}
 		}
 		break;
 	default:
